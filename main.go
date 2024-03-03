@@ -5,10 +5,13 @@ func main() {
 	//message := "Hello, world"
 	/*var i int = 32
 	var f float32 = float32(i)*/
-	const (
+	/*const (
 		a = iota
 		b
 		c
-	)
-	fmt.Println(a + b + c)
+	)*/
+	a := 42
+	b := &a
+	a = 27
+	fmt.Println(*b)
 }
