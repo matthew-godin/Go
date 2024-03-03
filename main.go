@@ -1,5 +1,10 @@
 package main
-import "fmt"
+import (
+	"fmt"
+	"bufio"
+	"os"
+	"strings"
+)
 
 func main() {
 	//message := "Hello, world"
@@ -13,6 +18,11 @@ func main() {
 	/*a := 42
 	b := &a
 	a = 27*/
-	c := new(int)
-	fmt.Println(*c)
+	//c := new(int)
+	//fmt.Println(*c)
+	in := bufio.NewReader(os.Stdin)
+	s, _ := in.ReadString('\n')
+	s = strings.TrimSpace(s)
+	s = strings.ToUpper(s)
+	fmt.Println(s + "!")
 }
