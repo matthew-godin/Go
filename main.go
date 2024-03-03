@@ -10,8 +10,9 @@ func main() {
 		b
 		c
 	)*/
-	a := 42
+	/*a := 42
 	b := &a
-	a = 27
-	fmt.Println(*b)
+	a = 27*/
+	c := new(int)
+	fmt.Println(*c)
 }
