@@ -1,9 +1,14 @@
 package main
-import (
+/*import (
 	"fmt"
 	"bufio"
 	"os"
 	"strings"
+)*/
+import (
+	"os"
+	"net/http"
+	"io"
 )
 
 func main() {
@@ -20,9 +25,16 @@ func main() {
 	a = 27*/
 	//c := new(int)
 	//fmt.Println(*c)
-	in := bufio.NewReader(os.Stdin)
+	/*in := bufio.NewReader(os.Stdin)
 	s, _ := in.ReadString('\n')
 	s = strings.TrimSpace(s)
 	s = strings.ToUpper(s)
-	fmt.Println(s + "!")
+	fmt.Println(s + "!")*/
+	http.HandleFunc("/", Handler)
+	http.ListenAndServe(":3000", nil)
+}
+
+func Handler(w http.ResponseWriter, r *http.Request) {
+	f, _ := os.Open("./menu.txt")
+	io.Copy(w, f)
 }
