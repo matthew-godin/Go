@@ -184,6 +184,8 @@ func main() {
 	fmt.Println(s3)*/
 	err := errors.New("this is an error")
 	fmt.Println(err)
+	err2 := fmt.Errorf("this error wraps the first one: %w", err)
+	fmt.Println(err2)
 }
 
 /*type addable interface {
