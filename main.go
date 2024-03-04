@@ -100,14 +100,18 @@ func main() {
 	default:
 		fmt.Println("default case")
 	}*/
-	switch i := 4; {
+	/*switch i := 4; {
 	case i < 5:
 		fmt.Println("less than 5")
 	case i < 10:
 		fmt.Println("less than 10")
 	default:
 		fmt.Println("at least 10")
-	}
+	}*/
+	fmt.Println("main 1")
+	defer fmt.Println("defer 1")
+	fmt.Println("main 2")
+	defer fmt.Println("defer 2")
 }
 
 /*func Handler(w http.ResponseWriter, r *http.Request) {
