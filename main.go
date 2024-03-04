@@ -160,20 +160,20 @@ func main() {
 	default:
 		fmt.Println("no type was matched")
 	}*/
-	testScores := []float64{
-		87.3,
-		105,
-		63.5,
-		27,
+	testScores := map[string]float64{
+		"Harry":    87.3,
+		"Hermione": 105,
+		"Ronald":   63.5,
+		"Neville":  27,
 	}
 	c := clone(testScores)
-	fmt.Println(&testScores[0], &c[0])
+	fmt.Println(c)
 }
 
-func clone[V any](s []V) []V {
-	result := make([]V, len(s))
-	for i, v := range s {
-		result[i] = v
+func clone[K comparable, V any](m map[K]V) map[K]V {
+	result := make(map[K]V, len(m))
+	for k, v := range m {
+		result[k] = v
 	}
 	return result
 }
