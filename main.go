@@ -67,12 +67,13 @@ func main() {
 	s2 := s
 	s.name = "Tricia"
 	fmt.Println(s == s2)*/
-	/*i := 1
+	i := 1
 	for {
 		fmt.Println(i)
 		i += 1
-	}*/
-	i := 1
+		break
+	}
+	i = 1
 	for i < 3 {
 		fmt.Println(i)
 		i += 1
