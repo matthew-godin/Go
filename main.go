@@ -138,12 +138,34 @@ func main() {
 	fmt.Println(otherName)*/
 	//fmt.Println(divide(45, 0))
 	//fmt.Println(menu.Menu)
-	var mi myInt = 4
+	/*var mi myInt = 4
 	mi.Update(3)
-	fmt.Println(mi.IsEven())
+	fmt.Println(mi.IsEven())*/
+	var pl PrintlnReader = "a"
+	var p PrintReader = "b"
+	var r Reader
+	r = p
+	r = pl
+	r.Read()
 }
 
-type myInt int
+type Reader interface {
+	Read()
+}
+
+type PrintlnReader string
+
+func (p PrintlnReader) Read() {
+	fmt.Println(p)
+}
+
+type PrintReader string
+
+func (p PrintReader) Read() {
+	fmt.Print(p)
+}
+
+/*type myInt int
 
 func (i *myInt) Update(n int) {
 	*i = myInt(n)
@@ -151,7 +173,7 @@ func (i *myInt) Update(n int) {
 
 func (i myInt) IsEven() bool {
 	return int(i)%2 == 0
-}
+}*/
 
 /*type myInt int
 
