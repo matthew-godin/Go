@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /*import (
 	"fmt"
 	"bufio"
@@ -13,6 +11,10 @@ import "fmt"
 	"net/http"
 	"io"
 )*/
+import (
+	"fmt"
+	"program/menu"
+)
 
 func main() {
 	//message := "Hello, world"
@@ -132,7 +134,8 @@ func main() {
 	myFunc(name, &otherName)
 	fmt.Println(name)
 	fmt.Println(otherName)*/
-	fmt.Println(divide(45, 0))
+	//fmt.Println(divide(45, 0))
+	fmt.Println(menu.Menu)
 }
 
 /*func greet(name1 string, name2 string) {
@@ -163,14 +166,14 @@ func main() {
 	return l / r, true
 }*/
 
-func divide(l, r int) (result int, ok bool) {
+/*func divide(l, r int) (result int, ok bool) {
 	if r == 0 {
 		return
 	}
 	result = l / r
 	ok = true
 	return
-}
+}*/
 
 /*func func1() {
 	defer func() {
