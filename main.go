@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 /*import (
 	"fmt"
 	"bufio"
@@ -218,7 +214,7 @@ func main() {
 	default:
 		fmt.Println("no messages available")
 	}*/
-	ch := make(chan int)
+	/*ch := make(chan int)
 	go func() {
 		for i := 0; i < 10; i++ {
 			ch <- i
@@ -227,7 +223,11 @@ func main() {
 	}()
 	for msg := range ch {
 		fmt.Println(msg)
-	}
+	}*/
+}
+
+func Add(l, r int) int {
+	return l + r
 }
 
 /*func divide(a, b int) error {
