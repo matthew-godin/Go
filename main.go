@@ -81,9 +81,17 @@ func main() {
 	for i := 1; i < 5; i++ {
 		fmt.Println(i)
 	}*/
-	m := map[string]int{"foo": 1, "bar": 2}
+	/*m := map[string]int{"foo": 1, "bar": 2}
 	for _, value := range m {
 		fmt.Println(value)
+	}*/
+	i := 5
+	if i < 5 {
+		fmt.Println("Less than 5")
+	} else if i < 10 {
+		fmt.Println("Less than 10")
+	} else {
+		fmt.Println("At least 10")
 	}
 }
 
