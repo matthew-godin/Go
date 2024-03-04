@@ -108,10 +108,22 @@ func main() {
 	default:
 		fmt.Println("at least 10")
 	}*/
-	fmt.Println("main 1")
+	/*fmt.Println("main 1")
 	defer fmt.Println("defer 1")
 	fmt.Println("main 2")
-	defer fmt.Println("defer 2")
+	defer fmt.Println("defer 2")*/
+	fmt.Println("main 1")
+	func1()
+	fmt.Println("main 2")
+}
+
+func func1() {
+	defer func() {
+		fmt.Println(recover())
+	}()
+	fmt.Println("func 1 1")
+	panic("uh-oh")
+	fmt.Println("func 1 2")
 }
 
 /*func Handler(w http.ResponseWriter, r *http.Request) {
