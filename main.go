@@ -146,8 +146,10 @@ func main() {
 	var r Reader
 	r = p
 	r = pl
-	var pl2 = r.(PrintlnReader)
-	pl2.Read()
+	pl2, ok := r.(PrintlnReader)
+	if ok {
+		pl2.Read()
+	}
 }
 
 type Reader interface {
