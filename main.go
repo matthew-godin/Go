@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"time"
 )
 
 /*import (
@@ -203,7 +202,7 @@ func main() {
 		wg.Done()
 	}()
 	wg.Wait()*/
-	ch1, ch2 := make(chan string), make(chan string)
+	/*ch1, ch2 := make(chan string), make(chan string)
 	go func() {
 		ch1 <- "message to channel 1"
 	}()
@@ -218,6 +217,16 @@ func main() {
 		fmt.Println(msg)
 	default:
 		fmt.Println("no messages available")
+	}*/
+	ch := make(chan int)
+	go func() {
+		for i := 0; i < 10; i++ {
+			ch <- i
+		}
+		close(ch)
+	}()
+	for msg := range ch {
+		fmt.Println(msg)
 	}
 }
 
