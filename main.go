@@ -37,7 +37,7 @@ func main() {
 	arr := [3]string{"foo", "bar", "baz"}
 	arr2 := arr
 	arr[0] = "quux"
-	fmt.Println(arr2)
+	fmt.Println(arr == arr2)
 }
 
 /*func Handler(w http.ResponseWriter, r *http.Request) {
