@@ -146,9 +146,19 @@ func main() {
 	var r Reader
 	r = p
 	r = pl
-	pl2, ok := r.(PrintlnReader)
+	/*pl2, ok := r.(PrintlnReader)
 	if ok {
 		pl2.Read()
+	}*/
+	switch v := r.(type) {
+	case PrintlnReader:
+		fmt.Println("is a PrintlnReader")
+		v.Read()
+	case PrintReader:
+		fmt.Println("is a PrintReader")
+		v.Read()
+	default:
+		fmt.Println("no type was matched")
 	}
 }
 
