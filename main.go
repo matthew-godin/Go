@@ -85,13 +85,20 @@ func main() {
 	for _, value := range m {
 		fmt.Println(value)
 	}*/
-	i := 5
-	if i < 5 {
+	/*if i := 5; i < 5 {
 		fmt.Println("Less than 5")
 	} else if i < 10 {
 		fmt.Println("Less than 10")
 	} else {
 		fmt.Println("At least 10")
+	}*/
+	switch i := 7; i {
+	case 1:
+		fmt.Println("first case")
+	case 2 + 3, 2*2 + 3:
+		fmt.Println("second case")
+	default:
+		fmt.Println("default case")
 	}
 }
 
