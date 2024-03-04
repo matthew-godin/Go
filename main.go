@@ -182,10 +182,22 @@ func main() {
 	fmt.Println(s1)
 	fmt.Println(s2)
 	fmt.Println(s3)*/
-	err := errors.New("this is an error")
+	/*err := errors.New("this is an error")
 	fmt.Println(err)
 	err2 := fmt.Errorf("this error wraps the first one: %w", err)
-	fmt.Println(err2)
+	fmt.Println(err2)*/
+	err := divide(1, 0)
+	if err != nil {
+		fmt.Println(fmt.Errorf("invalid input: %w", err))
+	}
+}
+
+func divide(a, b int) error {
+	if b == 0 {
+		return errors.New("cannot divide by zero")
+	}
+	fmt.Println(a / b)
+	return nil
 }
 
 /*type addable interface {
