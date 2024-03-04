@@ -67,7 +67,7 @@ func main() {
 	s2 := s
 	s.name = "Tricia"
 	fmt.Println(s == s2)*/
-	i := 1
+	/*i := 1
 	for {
 		fmt.Println(i)
 		i += 1
@@ -80,6 +80,10 @@ func main() {
 	}
 	for i := 1; i < 5; i++ {
 		fmt.Println(i)
+	}*/
+	m := map[string]int{"foo": 1, "bar": 2}
+	for _, value := range m {
+		fmt.Println(value)
 	}
 }
 
