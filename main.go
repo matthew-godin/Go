@@ -115,16 +115,44 @@ func main() {
 	/*fmt.Println("main 1")
 	func1()
 	fmt.Println("main 2")*/
-	for i := 0; i < 10; i++ {
-		for j := 0; j < 10; j++ {
-			fmt.Println(i, j)
-			if i+j == 15 {
-				goto myLabel
+	/*for i := 0; i < 10; i++ {
+			for j := 0; j < 10; j++ {
+				fmt.Println(i, j)
+				if i+j == 15 {
+					goto myLabel
+				}
 			}
 		}
+	myLabel:
+		fmt.Println("End of program")*/
+	//greet("a", "b", "c")
+	name, otherName := "Name", "Other name"
+	fmt.Println(name)
+	fmt.Println(otherName)
+	myFunc(name, &otherName)
+	fmt.Println(name)
+	fmt.Println(otherName)
+}
+
+/*func greet(name1 string, name2 string) {
+	fmt.Println(name1)
+	fmt.Println(name2)
+}*/
+
+/*func greet(name1, name2 string) {
+	fmt.Println(name1)
+	fmt.Println(name2)
+}*/
+
+/*func greet(names ...string) {
+	for _, n := range names {
+		fmt.Println(n)
 	}
-myLabel:
-	fmt.Println("End of program")
+}*/
+
+func myFunc(name string, otherName *string) {
+	name = "New name"
+	*otherName = "Other new name"
 }
 
 /*func func1() {
