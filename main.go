@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 /*import (
 	"fmt"
 	"bufio"
@@ -11,10 +13,10 @@ package main
 	"net/http"
 	"io"
 )*/
-import (
+/*import (
 	"fmt"
 	"program/menu"
-)
+)*/
 
 func main() {
 	//message := "Hello, world"
@@ -135,7 +137,14 @@ func main() {
 	fmt.Println(name)
 	fmt.Println(otherName)*/
 	//fmt.Println(divide(45, 0))
-	fmt.Println(menu.Menu)
+	//fmt.Println(menu.Menu)
+	fmt.Println(myInt.isEven(3))
+}
+
+type myInt int
+
+func (i myInt) isEven() bool {
+	return int(i)%2 == 0
 }
 
 /*func greet(name1 string, name2 string) {
