@@ -11,7 +11,10 @@ package main
 	"net/http"
 	"io"
 )*/
-import "fmt"
+import (
+	"fmt"
+	"slices"
+)
 
 func main() {
 	//message := "Hello, world"
@@ -34,10 +37,16 @@ func main() {
 	fmt.Println(s + "!")*/
 	/*http.HandleFunc("/", Handler)
 	http.ListenAndServe(":3000", nil)*/
-	arr := [3]string{"foo", "bar", "baz"}
+	/*arr := [3]string{"foo", "bar", "baz"}
 	arr2 := arr
 	arr[0] = "quux"
-	fmt.Println(arr == arr2)
+	fmt.Println(arr == arr2)*/
+	var s = []int{1, 2, 3}
+	fmt.Println(s[1])
+	s = append(s, 5, 10, 15)
+	fmt.Println(s)
+	s = slices.Delete(s, 1, 3)
+	fmt.Println(s)
 }
 
 /*func Handler(w http.ResponseWriter, r *http.Request) {
