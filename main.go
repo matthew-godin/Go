@@ -1,5 +1,9 @@
 package main
 
+import (
+	"fmt"
+)
+
 /*import (
 	"fmt"
 	"bufio"
@@ -11,9 +15,6 @@ package main
 	"net/http"
 	"io"
 )*/
-import (
-	"fmt"
-)
 
 func main() {
 	//message := "Hello, world"
@@ -46,12 +47,18 @@ func main() {
 	fmt.Println(s)
 	s = slices.Delete(s, 1, 3)
 	fmt.Println(s)*/
-	m := map[string]int{"foo": 1, "bar": 2}
+	/*m := map[string]int{"foo": 1, "bar": 2}
 	m["bar"] = 99
 	delete(m, "foo")
 	fmt.Println(m)
 	v, ok := m["foo"]
-	fmt.Println(v, ok)
+	fmt.Println(v, ok)*/
+	var s struct {
+		name string
+		id   int
+	}
+	s.name = "Arthur"
+	fmt.Println(s)
 }
 
 /*func Handler(w http.ResponseWriter, r *http.Request) {
