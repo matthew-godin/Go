@@ -13,7 +13,6 @@ package main
 )*/
 import (
 	"fmt"
-	"slices"
 )
 
 func main() {
@@ -41,12 +40,18 @@ func main() {
 	arr2 := arr
 	arr[0] = "quux"
 	fmt.Println(arr == arr2)*/
-	var s = []int{1, 2, 3}
+	/*var s = []int{1, 2, 3}
 	fmt.Println(s[1])
 	s = append(s, 5, 10, 15)
 	fmt.Println(s)
 	s = slices.Delete(s, 1, 3)
-	fmt.Println(s)
+	fmt.Println(s)*/
+	m := map[string]int{"foo": 1, "bar": 2}
+	m["bar"] = 99
+	delete(m, "foo")
+	fmt.Println(m)
+	v, ok := m["foo"]
+	fmt.Println(v, ok)
 }
 
 /*func Handler(w http.ResponseWriter, r *http.Request) {
