@@ -132,7 +132,7 @@ func main() {
 	myFunc(name, &otherName)
 	fmt.Println(name)
 	fmt.Println(otherName)*/
-	fmt.Println(divide(45, 2))
+	fmt.Println(divide(45, 0))
 }
 
 /*func greet(name1 string, name2 string) {
@@ -156,11 +156,20 @@ func main() {
 	*otherName = "Other new name"
 }*/
 
-func divide(l, r int) (int, bool) {
+/*func divide(l, r int) (int, bool) {
 	if r == 0 {
 		return 0, false
 	}
 	return l / r, true
+}*/
+
+func divide(l, r int) (result int, ok bool) {
+	if r == 0 {
+		return
+	}
+	result = l / r
+	ok = true
+	return
 }
 
 /*func func1() {
