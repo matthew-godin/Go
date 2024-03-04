@@ -92,13 +92,21 @@ func main() {
 	} else {
 		fmt.Println("At least 10")
 	}*/
-	switch i := 7; i {
+	/*switch i := 7; i {
 	case 1:
 		fmt.Println("first case")
 	case 2 + 3, 2*2 + 3:
 		fmt.Println("second case")
 	default:
 		fmt.Println("default case")
+	}*/
+	switch i := 4; {
+	case i < 5:
+		fmt.Println("less than 5")
+	case i < 10:
+		fmt.Println("less than 10")
+	default:
+		fmt.Println("at least 10")
 	}
 }
 
