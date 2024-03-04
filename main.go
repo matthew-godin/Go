@@ -1,8 +1,8 @@
 package main
 
 import (
-	"errors"
 	"fmt"
+	"sync"
 )
 
 /*import (
@@ -186,19 +186,26 @@ func main() {
 	fmt.Println(err)
 	err2 := fmt.Errorf("this error wraps the first one: %w", err)
 	fmt.Println(err2)*/
-	err := divide(1, 0)
+	/*err := divide(1, 0)
 	if err != nil {
 		fmt.Println(fmt.Errorf("invalid input: %w", err))
-	}
+	}*/
+	var wg sync.WaitGroup
+	wg.Add(1)
+	go func() {
+		fmt.Println("go routine")
+		wg.Done()
+	}()
+	wg.Wait()
 }
 
-func divide(a, b int) error {
+/*func divide(a, b int) error {
 	if b == 0 {
 		return errors.New("cannot divide by zero")
 	}
 	fmt.Println(a / b)
 	return nil
-}
+}*/
 
 /*type addable interface {
 	int | float64 | string
