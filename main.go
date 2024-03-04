@@ -139,14 +139,25 @@ func main() {
 	//fmt.Println(divide(45, 0))
 	//fmt.Println(menu.Menu)
 	var mi myInt = 4
-	fmt.Println(mi.isEven())
+	mi.Update(3)
+	fmt.Println(mi.IsEven())
 }
 
 type myInt int
 
-func (i myInt) isEven() bool {
+func (i *myInt) Update(n int) {
+	*i = myInt(n)
+}
+
+func (i myInt) IsEven() bool {
 	return int(i)%2 == 0
 }
+
+/*type myInt int
+
+func (i myInt) isEven() bool {
+	return int(i)%2 == 0
+}*/
 
 /*func greet(name1 string, name2 string) {
 	fmt.Println(name1)
