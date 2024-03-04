@@ -126,12 +126,13 @@ func main() {
 	myLabel:
 		fmt.Println("End of program")*/
 	//greet("a", "b", "c")
-	name, otherName := "Name", "Other name"
+	/*name, otherName := "Name", "Other name"
 	fmt.Println(name)
 	fmt.Println(otherName)
 	myFunc(name, &otherName)
 	fmt.Println(name)
-	fmt.Println(otherName)
+	fmt.Println(otherName)*/
+	fmt.Println(divide(45, 2))
 }
 
 /*func greet(name1 string, name2 string) {
@@ -150,9 +151,16 @@ func main() {
 	}
 }*/
 
-func myFunc(name string, otherName *string) {
+/*func myFunc(name string, otherName *string) {
 	name = "New name"
 	*otherName = "Other new name"
+}*/
+
+func divide(l, r int) (int, bool) {
+	if r == 0 {
+		return 0, false
+	}
+	return l / r, true
 }
 
 /*func func1() {
