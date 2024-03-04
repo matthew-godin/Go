@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 /*import (
 	"fmt"
@@ -168,7 +171,7 @@ func main() {
 	}
 	c := clone(testScores)
 	fmt.Println(c)*/
-	a1 := []int{1, 2, 3}
+	/*a1 := []int{1, 2, 3}
 	a2 := []float64{3.14, 6.02}
 	a3 := []string{"foo", "bar", "baz"}
 
@@ -178,10 +181,12 @@ func main() {
 
 	fmt.Println(s1)
 	fmt.Println(s2)
-	fmt.Println(s3)
+	fmt.Println(s3)*/
+	err := errors.New("this is an error")
+	fmt.Println(err)
 }
 
-type addable interface {
+/*type addable interface {
 	int | float64 | string
 }
 
@@ -191,7 +196,7 @@ func add[V addable](s []V) V {
 		result += v
 	}
 	return result
-}
+}*/
 
 /*func clone[K comparable, V any](m map[K]V) map[K]V {
 	result := make(map[K]V, len(m))
