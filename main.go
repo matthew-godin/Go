@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 /*import (
 	"fmt"
@@ -53,12 +51,22 @@ func main() {
 	fmt.Println(m)
 	v, ok := m["foo"]
 	fmt.Println(v, ok)*/
-	var s struct {
+	/*var s struct {
 		name string
 		id   int
 	}
 	s.name = "Arthur"
-	fmt.Println(s)
+	fmt.Println(s)*/
+	type myStruct struct {
+		name string
+		id   int
+	}
+	s := myStruct{
+		name: "Arthur",
+		id:   42}
+	s2 := s
+	s.name = "Tricia"
+	fmt.Println(s == s2)
 }
 
 /*func Handler(w http.ResponseWriter, r *http.Request) {
