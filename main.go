@@ -191,9 +191,15 @@ func main() {
 		fmt.Println(fmt.Errorf("invalid input: %w", err))
 	}*/
 	var wg sync.WaitGroup
+	ch := make(chan int)
 	wg.Add(1)
 	go func() {
-		fmt.Println("go routine")
+		ch <- 42
+		/*fmt.Println("go routine")
+		wg.Done()*/
+	}()
+	go func() {
+		fmt.Println(<-ch)
 		wg.Done()
 	}()
 	wg.Wait()
