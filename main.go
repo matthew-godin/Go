@@ -138,7 +138,8 @@ func main() {
 	fmt.Println(otherName)*/
 	//fmt.Println(divide(45, 0))
 	//fmt.Println(menu.Menu)
-	fmt.Println(myInt.isEven(3))
+	var mi myInt = 4
+	fmt.Println(mi.isEven())
 }
 
 type myInt int
