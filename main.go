@@ -141,16 +141,16 @@ func main() {
 	/*var mi myInt = 4
 	mi.Update(3)
 	fmt.Println(mi.IsEven())*/
-	var pl PrintlnReader = "a"
+	/*var pl PrintlnReader = "a"
 	var p PrintReader = "b"
 	var r Reader
 	r = p
-	r = pl
+	r = pl*/
 	/*pl2, ok := r.(PrintlnReader)
 	if ok {
 		pl2.Read()
 	}*/
-	switch v := r.(type) {
+	/*switch v := r.(type) {
 	case PrintlnReader:
 		fmt.Println("is a PrintlnReader")
 		v.Read()
@@ -159,10 +159,26 @@ func main() {
 		v.Read()
 	default:
 		fmt.Println("no type was matched")
+	}*/
+	testScores := []float64{
+		87.3,
+		105,
+		63.5,
+		27,
 	}
+	c := clone(testScores)
+	fmt.Println(&testScores[0], &c[0])
 }
 
-type Reader interface {
+func clone[V any](s []V) []V {
+	result := make([]V, len(s))
+	for i, v := range s {
+		result[i] = v
+	}
+	return result
+}
+
+/*type Reader interface {
 	Read()
 }
 
@@ -176,7 +192,7 @@ type PrintReader string
 
 func (p PrintReader) Read() {
 	fmt.Print(p)
-}
+}*/
 
 /*type myInt int
 
