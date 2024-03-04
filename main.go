@@ -1,15 +1,17 @@
 package main
+
 /*import (
 	"fmt"
 	"bufio"
 	"os"
 	"strings"
 )*/
-import (
+/*import (
 	"os"
 	"net/http"
 	"io"
-)
+)*/
+import "fmt"
 
 func main() {
 	//message := "Hello, world"
@@ -30,11 +32,15 @@ func main() {
 	s = strings.TrimSpace(s)
 	s = strings.ToUpper(s)
 	fmt.Println(s + "!")*/
-	http.HandleFunc("/", Handler)
-	http.ListenAndServe(":3000", nil)
+	/*http.HandleFunc("/", Handler)
+	http.ListenAndServe(":3000", nil)*/
+	arr := [3]string{"foo", "bar", "baz"}
+	arr2 := arr
+	arr[0] = "quux"
+	fmt.Println(arr2)
 }
 
-func Handler(w http.ResponseWriter, r *http.Request) {
+/*func Handler(w http.ResponseWriter, r *http.Request) {
 	f, _ := os.Open("./menu.txt")
 	io.Copy(w, f)
-}
+}*/
