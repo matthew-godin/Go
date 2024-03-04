@@ -112,19 +112,29 @@ func main() {
 	defer fmt.Println("defer 1")
 	fmt.Println("main 2")
 	defer fmt.Println("defer 2")*/
-	fmt.Println("main 1")
+	/*fmt.Println("main 1")
 	func1()
-	fmt.Println("main 2")
+	fmt.Println("main 2")*/
+	for i := 0; i < 10; i++ {
+		for j := 0; j < 10; j++ {
+			fmt.Println(i, j)
+			if i+j == 15 {
+				goto myLabel
+			}
+		}
+	}
+myLabel:
+	fmt.Println("End of program")
 }
 
-func func1() {
+/*func func1() {
 	defer func() {
 		fmt.Println(recover())
 	}()
 	fmt.Println("func 1 1")
 	panic("uh-oh")
 	fmt.Println("func 1 2")
-}
+}*/
 
 /*func Handler(w http.ResponseWriter, r *http.Request) {
 	f, _ := os.Open("./menu.txt")
