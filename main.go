@@ -57,7 +57,7 @@ func main() {
 	}
 	s.name = "Arthur"
 	fmt.Println(s)*/
-	type myStruct struct {
+	/*type myStruct struct {
 		name string
 		id   int
 	}
@@ -66,7 +66,20 @@ func main() {
 		id:   42}
 	s2 := s
 	s.name = "Tricia"
-	fmt.Println(s == s2)
+	fmt.Println(s == s2)*/
+	/*i := 1
+	for {
+		fmt.Println(i)
+		i += 1
+	}*/
+	i := 1
+	for i < 3 {
+		fmt.Println(i)
+		i += 1
+	}
+	for i := 1; i < 5; i++ {
+		fmt.Println(i)
+	}
 }
 
 /*func Handler(w http.ResponseWriter, r *http.Request) {
